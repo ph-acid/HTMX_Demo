@@ -141,6 +141,10 @@ a:hover::after {
     width: 100%;
 }
 
+a.active {
+ font-weight : bold;
+}
+
 /* ===== CODE ===== */
 
 code {
