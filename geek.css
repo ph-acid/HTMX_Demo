@@ -1,0 +1,169 @@
+/* ===== RESET ===== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg: #0d1117;
+    --panel: #161b22;
+    --panel-hover: #1c2128;
+
+    --text: #e6edf3;
+    --text-muted: #8b949e;
+
+    --primary: #58a6ff;
+    --secondary: #00d9ff;
+    --accent: #7ee787;
+
+    --border: #30363d;
+
+    --radius: 12px;
+    --shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Segoe UI", system-ui, sans-serif;
+    line-height: 1.7;
+    max-width: 1200px;
+    margin: auto;
+    padding: 2rem;
+}
+
+/* ===== TITRES ===== */
+
+h1,
+h2,
+h3 {
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: 2.8rem;
+    color: var(--secondary);
+    text-shadow: 0 0 15px rgba(0, 217, 255, 0.35);
+    border-bottom: 2px solid var(--secondary);
+    padding-bottom: 0.4rem;
+}
+
+h2 {
+    font-size: 2rem;
+    color: var(--primary);
+}
+
+h2::before {
+    content: "\25B6 "; /* \25B6 = ► */
+    color: var(--secondary);
+	margin-right: 0.4rem;
+}
+
+h3 {
+    font-size: 1.4rem;
+    color: var(--accent);
+}
+
+/* ===== PARAGRAPHES ===== */
+
+p {
+    margin-bottom: 1rem;
+    color: var(--text);
+}
+
+/* ===== LISTES ===== */
+
+ul {
+    margin: 1rem 0 1.5rem 2rem;
+}
+
+li {
+    margin-bottom: 0.5rem;
+    color: var(--text);
+}
+
+li::marker {
+    color: var(--secondary);
+}
+
+/* ===== BLOCS ===== */
+
+div.card {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+
+    box-shadow: var(--shadow);
+    transition: 0.3s ease;
+}
+
+div.card:hover {
+    background: var(--panel-hover);
+    border-color: var(--primary);
+    transform: translateY(-2px);
+}
+
+/* ===== LIENS ===== */
+
+a {
+    color: var(--primary);
+    text-decoration: none;
+    transition: 0.25s ease;
+    position: relative;
+}
+
+a:hover {
+    color: var(--secondary);
+    text-shadow: 0 0 8px rgba(0, 217, 255, 0.7);
+}
+
+a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+
+    width: 0;
+    height: 2px;
+
+    background: var(--secondary);
+    transition: width 0.25s ease;
+}
+
+a:hover::after {
+    width: 100%;
+}
+
+/* ===== CODE ===== */
+
+code {
+    background: #21262d;
+    color: var(--accent);
+    padding: 0.15rem 0.4rem;
+    border-radius: 6px;
+    font-family: Consolas, monospace;
+}
+
+pre {
+    background: #161b22;
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--secondary);
+
+    padding: 1rem;
+    overflow-x: auto;
+    border-radius: var(--radius);
+}
+
+/* ===== SELECTION ===== */
+
+::selection {
+    background: var(--secondary);
+    color: black;
+}
