@@ -29,5 +29,5 @@ Any HTML element can trigger a server request.
 
 <b>Key Message : </b>HTMX updates only the relevant parts of a page, not the entire page.
 </P>
-
-<div hx-on::after-swap="HighlightMenu("home");"></div>
+<script src="highlight_menu.js"></script>
+<div hx-on::after-swap="HighlightMenu("home"); console.log("home);"></div>
