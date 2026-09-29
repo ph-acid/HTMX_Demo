@@ -9,5 +9,12 @@
 
 <P>Enjoy !</P>
 
-<script src="highlight_menu.js"></script>
-<div hx-on::after-swap="HighlightMenu("about"); console.log("about);"></div>
+<script src="../highlight_menu.js"></script>
+
+<script>
+  document.body.addEventListener('htmx:load', function(evt) {
+    console.log('nouveau contenu About chargé');
+    HighlightMenu("about");
+  });
+</script>
+
