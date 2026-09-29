@@ -10,15 +10,8 @@
 <h1>Mini HTMX Website</h1>
 
 <nav>
-    <a hx-get="./fragments/home.html"
-       hx-target="#content">
-       Home
-    </a>
-
-    <a hx-get="./fragments/about.html"
-       hx-target="#content">
-       About
-    </a>
+    <a id="home" hx-get="./fragments/home.html" hx-target="#content">Home</a>
+    <a id="about" hx-get="./fragments/about.html" hx-target="#content">About</a>
 </nav>
 
 <hr>
