@@ -30,11 +30,10 @@
 
 <b>Key Message : </b>HTMX updates only the relevant parts of a page, not the entire page.<BR>
 </P>
-<script src="highlight_menu.js"></script>
-<div hx-on::after-swap="HighlightMenu('home'); console.log('home');"></div>
+<script src="../../highlight_menu.js"></script>
 
 <script>
   document.body.addEventListener('htmx:load', function(evt) {
-    console.log('nouveau contenu chargé');
+    console.log('nouveau contenu Home chargé');
   });
 </script>
