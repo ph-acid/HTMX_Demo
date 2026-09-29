@@ -32,3 +32,9 @@
 </P>
 <script src="highlight_menu.js"></script>
 <div hx-on::after-swap="HighlightMenu('home'); console.log('home');"></div>
+
+<script>
+  document.body.addEventListener('htmx:load', function(evt) {
+    console.log('nouveau contenu chargé');
+  });
+</script>
